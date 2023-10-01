@@ -70,12 +70,6 @@ const app = new Elysia()
   })
   .use(swagger())
   .use(auth)
-  .use(
-    autoroutes({
-      routesDir: "./routes",
-      prefix: "/api",
-    })
-  )
   .listen(3000, ({ hostname, port }) => {
     console.log(`🦊 Elysia is running at ${hostname}:${port}`);
   });
